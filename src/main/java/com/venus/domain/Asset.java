@@ -1,0 +1,10 @@
+package com.venus.domain;
+
+import lombok.Data;
+
+/**
+ * Created by erix-mac on 15/8/14.
+ */
+@Data
+public class Asset {
+}

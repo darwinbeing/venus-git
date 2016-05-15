@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.venus.dao.mapper.MarketMapper">
+
+    <resultMap type="com.venus.domain.HistoricalData" id="HistoricalDataMap">
+        <id property="id" column="ID"/>
+        <result property="code" column="CODE"/>
+        <result property="name" column="NAME"/>
+        <result property="date" column="MKT_DATE"/>
+        <result property="open" column="PRICE_OPEN"/>
+        <result property="high" column="PRICE_HIGH"/>
+        <result property="low" column="PRICE_LOW"/>
+        <result property="close" column="PRICE_CLOSE"/>
+        <result property="volume" column="VOLUME"/>
+        <result property="volumeAmount" column="VOLUME_AMT"/>
+    </resultMap>
+
+    <select id="getAllHistoryData" resultMap="HistoricalDataMap">
+        <![CDATA[
+            SELECT * from MKT_DAILY_DATA
+        ]]>
+    </select>
+
+</mapper>
