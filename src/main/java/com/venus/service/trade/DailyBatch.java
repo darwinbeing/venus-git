@@ -32,7 +32,7 @@ public class DailyBatch {
 
     public final static long capital = 50000;
     private final static String FILE_TRANSACTION_LOCATOIN = Constants.TRADE_FILE_DAILY_REPORT_LOCATION;
-    ;
+
 
 
     @Autowired
